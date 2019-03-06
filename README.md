@@ -16,9 +16,16 @@ Or install it yourself as:
 
     $ gem install jekyll-furigana
 
-Set `furigana: true` in posts for which you want the FURIGANA to appear.
+Add jekyll-furigana to the `gems:` section in your site's `_config.yml`.
 
+```yml
+plugins:
+  - jekyll-furigana
 ```
+
+Set `furigana: true` in posts for which you want the **FURIGANA** to appear.
+
+```yml
 ---
 layout: post
 title: "Welcome to Jekyll!"
