@@ -2,10 +2,10 @@ require "jekyll/furigana/version"
 
 module Jekyll
   module Furigana
-    def furigana(html):
+    def furigana(html)
       return html unless furi_enabled?
 
-      html.gsub!(/\[(.+?)\|(.+?)\]/, "<ruby><rb>\\1</rb><rp>(</rp><rt>\\2</rt><rp>)</rp></ruby>")
+      html.gsub!(/(\[|「|\(|\{)(.+?):(.+?)(\]|」|\)|\})/, "<ruby><rb>\\2</rb><rp>(</rp><rt>\\3</rt><rp>)</rp></ruby>")
       html
     end
 
