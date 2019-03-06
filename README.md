@@ -20,9 +20,48 @@ Or install it yourself as:
 
     $ gem install jekyll-furigana
 
+Set `furigana: true` in posts for which you want the FURIGANA to appear.
+
+```
+---
+layout: post
+title: "Welcome to Jekyll!"
+furigana: true
+---
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+`furigana` filters, which can be applied to HTML content. the Liquid variable content available in Jekyll's templates.
+
+Add the `furigana` filter to your site's {{ content }} (e.g. `_layouts/post.html`).
+
+```
+{{ content | furigana }}
+```
+
+### Markdown format
+
+You can use one of below format or combine them.
+```
+[日本語:にほんご]
+```
+Or
+```
+「日本語:にほんご」
+```
+Or
+```
+(日本語:にほんご)
+```
+Or
+```
+{日本語:にほんご}
+```
+
+And this is result.
+
+![sample](img/sample.png)
 
 ## Development
 
